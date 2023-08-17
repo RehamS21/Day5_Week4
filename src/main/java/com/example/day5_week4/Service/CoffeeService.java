@@ -47,7 +47,7 @@ public class CoffeeService {
     }
 
     public Coffee getCoffeeById(Integer id){
-        Coffee coffee = coffeeRepository.findCoffeeById(id);
+        Coffee coffee = coffeeRepository.pleaseGetByIdForMe(id);
 
         if (coffee == null)
             throw new ApiException("Coffee not found");
@@ -63,4 +63,6 @@ public class CoffeeService {
 
         return categoryList;
     }
+
+
 }
